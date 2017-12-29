@@ -25,8 +25,8 @@
     },
     methods: {
       go (event) {
-        event.preventDefault()
-        this.$root.currentRoute = this.href
+        event.preventDefault();
+        this.$root.currentRoute = this.href;
         window.history.pushState(
           null,
           routes[this.href],
@@ -38,7 +38,7 @@
 </script>
 
 <style scoped>
-  .active {
-    color: cornflowerblue;
-  }
+  /*.active {*/
+    /*color: cornflowerblue;*/
+  /*}*/
 </style>

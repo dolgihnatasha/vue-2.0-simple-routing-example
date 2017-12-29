@@ -1,31 +1,29 @@
 <template>
-  <div class="container">
-    <ul>
-      <li>
-        <v-link href="/">Home</v-link>
-        <v-link href="/about">About</v-link>
-      </li>
-    </ul>
 
+  <main class="container-fluid">
+    <v-navbar/>
     <slot></slot>
-  </div>
+  </main>
 </template>
 
 <script>
-  import VLink from '../components/VLink.vue'
+  import VLink from '../components/VLink.vue';
+  import VNavbar from '../components/VNavbar.vue';
 
   export default {
     components: {
-      VLink
+      VLink,
+      VNavbar
     }
   }
 </script>
 
 <style scoped>
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 15px 30px;
-    background: #f9f7f5;
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    padding-top: 3.5rem;
   }
 </style>

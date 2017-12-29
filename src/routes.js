@@ -1,4 +1,6 @@
 export default {
-  '/': 'Home',
-  '/about': 'About'
+  '/manager/': 'Orders',
+  '/manager/about/': 'About',
+  '/manager/login/': 'Login',
+  '/manager/orders/': 'Orders'
 }
