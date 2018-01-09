@@ -1,7 +1,7 @@
 <template>
     <main-layout>
         <div class="container mt-3">
-            <form method="post" @submit.prevent="onSubmit">
+            <form method="post" v-on:submit.prevent="onSubmit">
                 <div class="form-group">
                     <label for="login">Логин</label>
                     <input v-model="form.login" id="login" class="form-control" placeholder="Логин">
