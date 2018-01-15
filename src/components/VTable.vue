@@ -1,25 +1,25 @@
 <template>
     <table class="table table-striped table-hover table-sm .table-responsive-sm header-fixed">
         <thead class="table-primary"><tr>
-            <th style="width: 2%" class=""><input type="checkbox" title="q" v-bind:onchange="selectAll()"></th>
-            <th style="width: 5%" class="">#</th>
-            <th style="width: 3%" class="">Пк</th>
-            <th style="width: 10%" class="">Поступление</th>
-            <th style="width: 8%" class="">Доставка</th>
-            <th style="width: 8%" class="">Статус</th>
-            <th style="width: 8%" class="name">Имя</th>
+            <th data-prior="1" style="width: 2%" class=""><input type="checkbox" title="q" v-on:change="selectAll()"></th>
+            <th data-prior="2" style="width: 5%" class="">#</th>
+            <th data-prior="1" style="width: 3%" class="">Пк</th>
+            <th data-prior="3" style="width: 10%" class="">Поступление</th>
+            <th data-prior="3" style="width: 8%" class="">Доставка</th>
+            <th data-prior="1" style="width: 8%" class="">Статус</th>
+            <th  style="width: 8%" class="name">Имя</th>
             <th style="width: 20%" class="name">Адрес</th>
             <th style="width: 5%" class="pay">Время</th>
             <th style="width: 7%" class="pay">Оплата</th>
-            <th style="width: 8%" class="sum">Стоимость</th>
+            <th data-prior="1" style="width: 8%" class="sum">Стоимость</th>
             <th style="width: 8%" class="courier">Редактор</th>
             <th style="width: 8%" class="courier">Курьер</th>
         </tr></thead>
         <tbody>
         <!--:key="row.id"-->
         <tr v-for="row in orders"
-            v-bind:onclick="printRow(row)">
-            <td style="width: 2%"><input v-bind:id="'chk_' + row.id" type="checkbox" title="q"></td>
+            v-on:dblclick="highlightRow(row)">
+            <td style="width: 2%"><input v-bind:id="'chk_'+ row.id" type="checkbox" title="q"></td>
             <td style="width: 5%">{{row.id}}</td>
             <td style="width: 3%">{{row.pack}}</td>
             <td style="width: 10%">{{row.date}}</td>
@@ -52,13 +52,16 @@
         },
         methods: {
             printRow(row) {
-                // alert('click');
+                alert('click');
                 // console.log(row);
             },
             selectAll() {
-                // let inputs = document.querySelectorAll('input[id|="#chk"]');
-                // console.log(inputs);
+                let inputs = document.querySelectorAll('input[id^=chk]');
+                console.log(inputs);
                 // // console.log(().length)
+            },
+            highlightRow(row) {
+                console.log(row);
             }
         }
     }

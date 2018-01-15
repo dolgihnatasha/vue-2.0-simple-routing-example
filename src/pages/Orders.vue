@@ -40,7 +40,7 @@
 
 <style scoped>
     .dived{
-        height: 200px;
+        height: 170px;
     }
 
 </style>

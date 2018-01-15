@@ -2,6 +2,7 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top ">
         <v-link class="navbar-brand" href="/manager/orders/">МЕНЕДЖЕР</v-link>
         <!--<a class="navbar-brand" href="/manager/orders/">МЕНЕДЖЕР</a>-->
+        <a class="navbar-brand" href="http://185.41.163.7:3000/admin/">АДМИНКА</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarToggler" aria-controls="navbarToggler"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -28,15 +29,15 @@
                 <!--<div class="nav-item">-->
                     <!--<span class="nav-link">username: <span class="text-white">wurld</span></span>-->
                 <!--</div>-->
-                <!--<div class="nav-item">-->
-                    <!--<v-link class="nav-link " href="/manager/orders/">Home</v-link>-->
-                <!--</div>-->
-                <!--<div class="nav-item">-->
-                    <!--<v-link class="nav-link " href="/manager/about/">About</v-link>-->
-                <!--</div>-->
-                <!--<div class="nav-item">-->
-                    <!--<v-link class="nav-link " href="/manager/login/">Login</v-link>-->
-                <!--</div>-->
+                <div class="nav-item">
+                    <v-link class="nav-link " href="/manager/orders/">Home</v-link>
+                </div>
+                <div class="nav-item">
+                    <v-link class="nav-link " href="/manager/about/">About</v-link>
+                </div>
+                <div class="nav-item">
+                    <v-link class="nav-link " href="/manager/login/">Login</v-link>
+                </div>
                 <div class="nav-item">
                     <v-link class="nav-link " href="/manager/orders/">Orders</v-link>
                 </div>
